@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+  <div *ngIf='selectedData==undefined;else second'>
+        <div class="card">
+          <div class="scrollbar">
+            <img class="card-img-top" src={{defaultData.photo}} alt="Card image cap">
+            </div>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">{{defaultData.region}}</h5>
+                              <p class="card-text text-center">{{defaultData.description}}</p>
+                            </div>
+                </div>
+                <div class="card-button mt-3 mb-3">
+                    <button (click)='gotocountry(defaultData.region)' class="btn btn-primary" >Explore</button>
+                    </div>
+            </div>
+            <ng-template #second>
+              <div *ngIf='selectedData!=undefined'>
+                    <div class="card">
+                      <div class="scrollbar">
+                         <img class="card-img-top" src={{selectedData.photo}} alt='Card image cap'>
+                         </div>
+                         <div class="card-body">
+                            <h5 class="card-title text-center">{{selectedData.region}}</h5>
+                            <p class="card-text text-center">{{selectedData.description}}</p>
+                          </div>
+                          <div class="card-button mt-3 mb-3">
+                              <button (click)='gotocountry(selectedData.region)' class="btn btn-primary">Explore</button>
+                              </div>
+                       
+                            </div>
+                        </div>
+            </ng-template>
+</div>
+</div>
+</div>

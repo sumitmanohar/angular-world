@@ -1,0 +1,92 @@
+.wrapper{
+    display: block;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    cursor: default;
+}
+.text-center{
+    display: flex;
+    justify-content: center;
+    
+;
+}
+.text-left{
+    display: flex;
+
+}
+.wrapper1{
+    display: block;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    cursor: default;
+
+}
+.btn{
+ -webkit-transition: All 1.5s ease;
+  -moz-transition: All 1.5s ease;
+  -o-transition: All 1.5s ease;
+  -ms-transition: All 1.5s ease;
+  transition: All 1.5s ease;
+}
+.button1:hover {
+    width: 200px;
+
+  
+  }
+
+  .example-container {
+    width: 100%;
+    height:100%;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+ 
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .example-sidenav {
+    padding: 10px;
+    background-color:#ecf0f1;
+  }
+  .size{
+      width: 300px;
+  }
+  .vertical-text {
+	transform: rotate(90deg);
+    transform-origin: 75% 100%;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 10px;   
+    letter-spacing: 8px; 
+}
+.card-img{
+    width:100%;
+    
+} 
+
+@media screen and (max-width:768px){
+    .card-img{
+        width:100%;
+    }
+    .img-back{
+        width: 100%;
+    }
+}  
+
+  

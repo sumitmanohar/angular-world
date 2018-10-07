@@ -1,0 +1,53 @@
+<p class="text-center mt-1" style="font-size: 25px;font-weight: bolder;">Filter Data</p>
+<div class="accordion" id="accordionExample">
+ <div class="card">
+      <div class="card-header" id="headingOne"> 
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Regions
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body border" style="cursor: pointer;" (click)='filterregion(region)'>
+          {{region}}
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Languages
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div *ngFor='let language of language;let index=i'>
+        <div class="card-body border" style="cursor: pointer;" (click)='filterlanguage(language)'>
+         
+              {{language.name}}
+              
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Currencies
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div *ngFor='let currencies of currencies'>
+        <div class="card-body border" style="cursor: pointer;" (click)='filtercurrency(currencies)'>
+          {{currencies.name}}
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>

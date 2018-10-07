@@ -1,0 +1,48 @@
+<div class="container-fluid" style="overflow-x: hidden">
+    <div *ngFor='let data of countryInfo'>
+        <h3 class="text-center mt-3">{{data.name}}</h3>
+        <h3 class="text-center mb-3">{{data.translations.fa}}</h3>
+           <div class="row">
+         <div class="col-lg-4 col-md-12 border mt-3">
+                <img class="card-img-top mt-3" src={{data.flag}} alt="Card image cap" style="height: 250px;">
+                <h5 class="text-center mt-5">Flag of {{data.name}}</h5>
+         </div>
+         
+         <div class="col-lg-8 col-md-12 border mt-3" style="overflow-x: auto;">
+    
+
+
+             <div class="text" style="margin-left: 50px;">Name<span class="text1 " style="margin-left: 120px;">{{data.name}}</span></div><hr>
+             <div class="text " style="margin-left: 50px;">TopLevelDomain<span class="text1" style="margin-left: 35px;text-transform: capitalize;">{{data.topLevelDomain}}</span></div><hr>
+             <div class="text" style="margin-left: 50px;">Alpha2Code<span class="text1" style="margin-left: 70px;">{{data.alpha2Code}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">Alpha3Code<span class="text1" style="margin-left: 70px;">{{data.alpha3Code}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">CallingCodes<span class="text1" style="margin-left: 65px">{{data.callingCodes}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Capital<span class="text1" style="margin-left: 105px;">{{data.capital}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">AltSpellings<span class="text1" style="margin-left: 70px;">{{data.altSpellings}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Region<span class="text1" style="margin-left: 105px;">{{data.region}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">Subregion<span class="text1" style="margin-left: 80px;">{{data.subregion}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">Population<span class="text1" style="margin-left: 80px;">{{data.population}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">Latlng<span class="text1" style="margin-left: 110px;">{{data.latlng}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Demonym<span class="text1" style="margin-left: 80px;">{{data.demonym}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Area<span class="text1" style="margin-left: 120px;">{{data.area}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Gini<span class="text1" style="margin-left: 125px;">{{data.gini}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Timezones<span class="text1" style="margin-left: 80px;">{{data.timezones}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">Borders<span class="text1" style="margin-left: 95px;">{{data.borders}}</span></div><hr>
+             <div class='text' style="margin-left: 50px;">NativeName<span class="text1" style="margin-left: 65px;">{{data.nativeName}}</span></div><hr>	
+             <div class='text' style="margin-left: 50px;">NumericCode<span class="text1" style="margin-left: 60px;">{{data.numericCode}}</span></div><hr>
+             
+                <div class='text' style="margin-left: 50px;">Currencies<span class="text1" *ngFor='let data of currencies;let first=first;let last=last' style="margin-left: 80px;">{{data.name}}</span></div><hr>	
+             
+            
+             <div class='text' style="margin-left: 50px;">Languages<span class="text1" *ngFor='let data of language;let first=first;let last=last' [ngStyle]="{'margin-left':first?'80px':'0px;'}">{{data.name}}{{last ? '':', '}}</span></div><hr>	
+            
+             <div style="display: flex;justify-content: center;" class="pb-5 pt-5">
+             <button type='button' (click)='gotopreviouspage()' [ngClass]="{'btn btn-primary':data.region=='Asia','btn btn-info':data.region=='Europe','btn btn-danger':data.region=='Americas','btn btn-warning':data.region=='Africa','btn btn-success':data.region=='Oceania'}" style="width: 85px;height:40px;padding: 10px;color:white;">Go Back</button>
+             </div>
+<!-- 
+         <div> -->
+           <!-- <div> -->
+          </div>
+
+        </div>
+    </div>

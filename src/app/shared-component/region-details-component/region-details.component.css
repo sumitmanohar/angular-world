@@ -1,0 +1,10 @@
+.scrollbar{
+    float:left;
+    overflow-y: auto;
+    height: 400px;
+
+}
+.card-button{
+    display: flex;
+    justify-content: center;
+}
